@@ -1,0 +1,66 @@
+body {
+  background-color: #191922;
+  color: #d9dbdf;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+header h1 {
+  color: #ece6d5;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.controls {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.toggle-label {
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #ece6d5;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.toggle-group {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #24384a;
+  border: 1px solid #d9dbdf;
+  border-radius: 4px;
+  padding: 0;
+}
+.toggle-group input[type=radio] {
+  display: none;
+}
+.toggle-group label {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  color: #d9dbdf;
+}
+.toggle-group label + label {
+  border-left: 1px solid #d9dbdf;
+}
+.toggle-group input[type=radio]:checked + label {
+  background-color: #ff8b00;
+  color: #191922;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.chart-card {
+  background-color: #24384a;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.chart-card canvas {
+  width: 100%;
+  height: 320px;
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

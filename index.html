@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" defer></script>
+  <!-- PapaParse CSV parsing library -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js" defer></script>
+  <!-- Our custom script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Sales Dashboard</h1>
+  </header>
+  <div class="controls">
+    <span class="toggle-label">Show by:</span>
+    <div class="toggle-group">
+      <input type="radio" id="metricQty" name="metric" value="quantity" checked />
+      <label for="metricQty" class="radio-toggle">Quantity</label>
+      <input type="radio" id="metricRev" name="metric" value="revenue" />
+      <label for="metricRev" class="radio-toggle">Revenue</label>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="chart-card">
+      <canvas id="salesChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas id="stockChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas id="profitChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas id="bestChart"></canvas>
+    </div>
+  </div>
+</body>
+</html>
